@@ -4,15 +4,31 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Todo'
 import Actor from './Actor'
+import Singer from './Singer'
 
 function App() {
+
+  const actors = ['Sakib', 'Rakib', 'Sharuk'];
+  
+  const singers = [
+    { name: 'Araf babu', age: '4 Years', liveIn: 'BD' },
+    { name: 'Kalid hasan', age: '54 Years', liveIn: 'BD' },
+    { name: 'Bappa Mojumdar', age: '64 Years', liveIn: 'BD' }
+  ]
+
   return (
     <>
       <h1>Vite + React</h1>
 
-      <Actor name1='Sakib Khan'></Actor>
+      {
+        singers.map(singer => <Singer singerName={singer.name} singerAge={singer.age}></Singer>)
+      }
 
-      <Todo task='Learn React' isDone = {true} ></Todo>
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      }
+
+      <Todo task='Learn React' isDone={true} ></Todo>
       <Todo task='Core concept' isDone={false}></Todo>
       <Todo task='Try JSX' isDone={true}></Todo>
       <Todo task='JavaScript' isDone={true}></Todo>
@@ -30,7 +46,7 @@ function App() {
   )
 }
 
-function Device({name, price=0}) {
+function Device({ name, price = 0 }) {
   return <h2>This is : {name} - Price : {price}</h2>
 }
 
@@ -65,4 +81,3 @@ function Student() {
 
 
 export default App
-

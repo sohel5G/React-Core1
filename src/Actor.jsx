@@ -1,8 +1,8 @@
-export default function Actor({ name1 }) {
+export default function Actor({ name }) {
     return (
         <div className="actor">
             <ul>
-                <li>{name1}</li>
+                <li>Actor Name: {name}</li>
             </ul>
         </div>
     )
