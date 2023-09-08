@@ -9,13 +9,13 @@ import Singer from './Singer'
 function App() {
 
   const actors = ['Sakib', 'Rakib', 'Sharuk'];
-  
+
   const singers = [
     { name: 'Araf babu', age: '4 Years', liveIn: 'BD' },
     { name: 'Kalid hasan', age: '54 Years', liveIn: 'BD' },
     { name: 'Bappa Mojumdar', age: '64 Years', liveIn: 'BD' }
   ]
-
+ 
   return (
     <>
       <h1>Vite + React</h1>

@@ -7,5 +7,3 @@ export default function Actor({ name }) {
         </div>
     )
 }
-
-
